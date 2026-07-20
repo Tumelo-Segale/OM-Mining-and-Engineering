@@ -1,0 +1,20 @@
+images/
+├── favicon.png
+├── logo.png
+├── hero-photo.jpg
+├── about-photo.jpg
+├── services/
+│   ├── precision-engineering.jpg
+│   ├── civil-construction.jpg
+│   ├── cleaning-services.jpg
+│   ├── renovations.jpg
+│   └── mining-supply.jpg
+├── projects/
+│   └── project-banner.jpg
+└── logos/
+    ├── royal-bafokeng-platinum.png
+    ├── macsteel.png
+    ├── 3q-concrete.png
+    ├── buco.png
+    ├── eskom.png
+    └── atlas-tower.png
