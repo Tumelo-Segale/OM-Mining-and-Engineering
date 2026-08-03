@@ -222,7 +222,7 @@ section {
   color: var(--navy-deep);
   line-height: 1.05;
 }
-.brand-text span {
+.brand-text .brand-tagline {
   display: block;
   font-family: var(--font-mono);
   font-size: 9.5px;
@@ -231,11 +231,28 @@ section {
   font-weight: 500;
   text-transform: uppercase;
 }
+.brand-text .brand-legal {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-top: 2px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.3px;
+  color: var(--navy);
+  opacity: 0.55;
+  font-weight: 500;
+  text-transform: none;
+  white-space: nowrap;
+}
 
 .nav-links {
   display: flex;
   align-items: center;
   gap: 30px;
+}
+.nav-legal {
+  display: none;
 }
 .nav-links a {
   font-size: 13.5px;
@@ -590,7 +607,8 @@ section {
 }
 .team-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 240px));
+  justify-content: center;
   gap: 24px;
   margin-top: 50px;
 }
@@ -997,6 +1015,19 @@ section {
 .footer-inner b {
   color: #fff;
 }
+.footer-legal {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 6px 10px;
+}
+.footer-legal > *:not(:first-child)::before {
+  content: "•";
+  margin-right: 10px;
+  opacity: 0.6;
+}
 .back-top {
   position: fixed;
   right: 22px;
@@ -1052,9 +1083,6 @@ section {
     grid-template-columns: 1fr;
     gap: 40px;
   }
-  .team-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
   .values-grid {
     grid-template-columns: 1fr 1fr;
   }
@@ -1096,14 +1124,35 @@ section {
     gap: 18px;
     border-bottom: 1px solid var(--line);
   }
+  .nav-legal {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-top: -4px;
+    padding-top: 16px;
+    border-top: 1px solid var(--line);
+    font-family: var(--font-mono);
+    font-size: 13px;
+    letter-spacing: 0.3px;
+    color: var(--navy);
+    opacity: 0.6;
+  }
+  .footer-legal {
+    flex-direction: column;
+    gap: 4px;
+  }
+  .footer-legal > *:not(:first-child)::before {
+    content: "";
+    margin-right: 0;
+  }
+  .brand-text .brand-legal {
+    display: none;
+  }
   .hero-facts {
     gap: 22px;
   }
   .values-grid {
     grid-template-columns: 1fr;
-  }
-  .team-grid {
-    grid-template-columns: 1fr 1fr;
   }
   .compliance-grid {
     grid-template-columns: 1fr;
